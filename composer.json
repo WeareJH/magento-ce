@@ -1,0 +1,11 @@
+{
+    "name": "wearejh/magento-ce",
+    "description": "Magento Community Edition",
+    "type": "magento-core",
+    "authors": [
+        {
+            "name": "Aydin Hassan",
+            "email": "aydin@wearejh.com"
+        }
+    ]
+}
