@@ -10,18 +10,18 @@
  * http://opensource.org/licenses/osl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
+ * to license@magento.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade Magento to newer
  * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
+ * needs please refer to http://www.magento.com for more information.
  *
  * @category    Mage
  * @package     Mage_Core
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @copyright  Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
 class Mage_Core_Controller_Varien_Router_Standard extends Mage_Core_Controller_Varien_Router_Abstract
@@ -201,10 +201,6 @@ class Mage_Core_Controller_Varien_Router_Standard extends Mage_Core_Controller_V
             // instantiate controller class
             $controllerInstance = Mage::getControllerInstance($controllerClassName, $request, $front->getResponse());
 
-            if (!$this->_validateControllerInstance($controllerInstance)) {
-                continue;
-            }
-
             if (!$controllerInstance->hasAction($action)) {
                 continue;
             }
@@ -276,17 +272,6 @@ class Mage_Core_Controller_Varien_Router_Standard extends Mage_Core_Controller_V
     }
 
     /**
-     * Check if current controller instance is allowed in current router.
-     * 
-     * @param Mage_Core_Controller_Varien_Action $controllerInstance
-     * @return boolean
-     */
-    protected function _validateControllerInstance($controllerInstance)
-    {
-        return $controllerInstance instanceof Mage_Core_Controller_Front_Action;
-    }
-
-    /**
      * Generating and validating class file name,
      * class and if evrything ok do include if needed and return of class name
      *
@@ -311,6 +296,7 @@ class Mage_Core_Controller_Varien_Router_Standard extends Mage_Core_Controller_V
 
         return $controllerClassName;
     }
+
 
     /**
      * @deprecated
