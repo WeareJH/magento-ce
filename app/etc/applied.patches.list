@@ -509,3 +509,9 @@ patching file skin/frontend/base/default/js/opcheckout.js
 Hunk #1 succeeded at 711 (offset 27 lines).
 
 
+-e -n 2017-11-13 13:24:52 UTC | SUPEE-10336_v1.14.2.4 | CE_1.9.2.4 | v1 | 721708ecf41f0ee745b8f441a4bfe56471b493a7 | Fri Sep 8 17:55:44 2017 +0300 | cc0d87..721708e
+patching file app/code/core/Mage/Usa/Model/Shipping/Carrier/Usps.php
+Hunk #2 succeeded at 698 (offset 6 lines).
+patching file app/locale/en_US/Mage_Usa.csv
+
+
