@@ -63,10 +63,6 @@ class Mage_Adminhtml_Newsletter_QueueController extends Mage_Adminhtml_Controlle
      */
     public function dropAction ()
     {
-        $request = $this->getRequest();
-        if ($request->getParam('text') && !$request->getPost('text')) {
-            $this->getResponse()->setRedirect($this->getUrl('*/newsletter_queue'));
-        }
         $this->loadLayout('newsletter_queue_preview');
         $this->renderLayout();
     }

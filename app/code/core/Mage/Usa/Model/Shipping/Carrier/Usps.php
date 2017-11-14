@@ -539,7 +539,7 @@ class Mage_Usa_Model_Shipping_Carrier_Usps
              'method' => array(
                  '0_FCLE' => Mage::helper('usa')->__('First-Class Mail Large Envelope'),
                  '0_FCL'  => Mage::helper('usa')->__('First-Class Mail Letter'),
-                 '0_FCP'  => Mage::helper('usa')->__('First-Class Package Service - Retail'),
+                 '0_FCP'  => Mage::helper('usa')->__('First-Class Mail Parcel'),
                  '0_FCPC' => Mage::helper('usa')->__('First-Class Mail Postcards'),
                  '1'      => Mage::helper('usa')->__('Priority Mail'),
                  '2'      => Mage::helper('usa')->__('Priority Mail Express Hold For Pickup'),
@@ -698,9 +698,9 @@ class Mage_Usa_Model_Shipping_Carrier_Usps
 
        // Added because USPS has different services but with same CLASSID value, which is "0"
              'method_to_code' => array(
-                 'First-Class Mail Large Envelope'      => '0_FCLE',
-                 'First-Class Mail Letter'              => '0_FCL',
-                 'First-Class Package Service - Retail' => '0_FCP',
+                 'First-Class Mail Large Envelope' => '0_FCLE',
+                 'First-Class Mail Letter'         => '0_FCL',
+                 'First-Class Mail Parcel'         => '0_FCP',
              ),
 
             'first_class_mail_type'=>array(
