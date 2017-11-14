@@ -417,7 +417,7 @@ final class Maged_Controller
      */
     public function cleanCacheAction()
     {
-        $result = $this->cleanCache(true);
+        $result = $this->cleanCache();
         echo json_encode($result);
     }
 
@@ -964,36 +964,25 @@ final class Maged_Controller
         }
     }
 
-    /**
-     * Clean cache
-     *
-     * @param bool $validate
-     * @return array
-     */
-    protected function cleanCache($validate = false)
+    protected function cleanCache()
     {
         $result = true;
         $message = '';
         try {
             if ($this->isInstalled()) {
-                if ($validate) {
-                    $result = $this->session()->validateCleanCacheKey();
+                if (!empty($_REQUEST['clean_sessions'])) {
+                    Mage::app()->cleanAllSessions();
+                    $message .= 'Session cleaned successfully. ';
                 }
-                if ($result) {
-                    if (!empty($_REQUEST['clean_sessions'])) {
-                        Mage::app()->cleanAllSessions();
-                        $message .= 'Session cleaned successfully. ';
-                    }
-                    Mage::app()->cleanCache();
+                Mage::app()->cleanCache();
 
-                    // reinit config and apply all updates
-                    Mage::app()->getConfig()->reinit();
-                    Mage_Core_Model_Resource_Setup::applyAllUpdates();
-                    Mage_Core_Model_Resource_Setup::applyAllDataUpdates();
-                    $message .= 'Cache cleaned successfully';
-                } else {
-                    $message .= 'Validation failed';
-                }
+                // reinit config and apply all updates
+                Mage::app()->getConfig()->reinit();
+                Mage_Core_Model_Resource_Setup::applyAllUpdates();
+                Mage_Core_Model_Resource_Setup::applyAllDataUpdates();
+                $message .= 'Cache cleaned successfully';
+            } else {
+                $result = true;
             }
         } catch (Exception $e) {
             $result = false;
