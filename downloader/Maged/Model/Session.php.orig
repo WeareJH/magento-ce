@@ -82,20 +82,6 @@ class Maged_Model_Session extends Maged_Model
     }
 
     /**
-     * Unset value by key
-     *
-     * @param string $key
-     * @return $this
-     */
-    public function delete($key)
-    {
-        if (isset($_SESSION[$key])) {
-            unset($_SESSION[$key]);
-        }
-        return $this;
-    }
-
-    /**
      * Authentication to downloader
      */
     public function authenticate()
@@ -267,25 +253,5 @@ class Maged_Model_Session extends Maged_Model
             return false;
         }
         return true;
-    }
-
-    /**
-     * Validate key for cache cleaning
-     *
-     * @return bool
-     */
-    public function validateCleanCacheKey()
-    {
-        $result = false;
-        $validateKey = $this->get('validate_cache_key');
-        if ($validateKey
-            && !empty($_REQUEST['validate_cache_key'])
-            && $validateKey == $_REQUEST['validate_cache_key']
-        ) {
-            $result = true;
-        }
-        $this->delete('validate_cache_key');
-
-        return $result;
     }
 }

@@ -827,3 +827,83 @@ patching file skin/frontend/base/default/js/opcheckout.js
 Hunk #1 succeeded at 711 (offset 27 lines).
 
 
+-e -n 2017-11-14 11:54:57 UTC | PATCH_SUPEE-9767_CE_1.9.3.0_v2 | CE_1.9.3.0 | v2 | 6566db274beaeb9bcdb56a62e02cc2da532e618c | Thu Jun 22 04:30:03 2017 +0300 | v1.14.3.3..HEAD
+patching file app/code/core/Mage/Admin/Model/Session.php
+patching file app/code/core/Mage/Adminhtml/Block/Checkout/Formkey.php
+patching file app/code/core/Mage/Adminhtml/Block/Notification/Symlink.php
+patching file app/code/core/Mage/Adminhtml/Block/Widget/Grid/Column/Filter/Date.php
+patching file app/code/core/Mage/Adminhtml/Model/Config/Data.php
+patching file app/code/core/Mage/Adminhtml/Model/System/Config/Backend/Symlink.php
+patching file app/code/core/Mage/Adminhtml/controllers/Catalog/Product/GalleryController.php
+patching file app/code/core/Mage/Checkout/controllers/MultishippingController.php
+patching file app/code/core/Mage/Checkout/controllers/OnepageController.php
+Hunk #1 succeeded at 350 (offset 1 line).
+Hunk #2 succeeded at 366 (offset 1 line).
+Hunk #3 succeeded at 413 (offset 1 line).
+Hunk #4 succeeded at 442 (offset 1 line).
+Hunk #5 succeeded at 481 (offset 1 line).
+patching file app/code/core/Mage/Checkout/etc/system.xml
+patching file app/code/core/Mage/Cms/Model/Wysiwyg/Images/Storage.php
+Hunk #1 succeeded at 282 (offset -1 lines).
+patching file app/code/core/Mage/Core/Controller/Front/Action.php
+patching file app/code/core/Mage/Core/Controller/Request/Http.php
+patching file app/code/core/Mage/Core/Model/File/Validator/Image.php
+Hunk #1 succeeded at 87 (offset -1 lines).
+Hunk #2 succeeded at 146 (offset -1 lines).
+patching file app/code/core/Mage/Core/etc/config.xml
+patching file app/code/core/Mage/Core/etc/system.xml
+patching file app/code/core/Mage/Core/sql/core_setup/upgrade-1.6.0.6.1.1-1.6.0.6.1.2.php
+patching file app/code/core/Mage/Customer/Model/Session.php
+patching file app/code/core/Mage/Dataflow/Model/Convert/Adapter/Zend/Cache.php
+patching file app/code/core/Mage/Dataflow/Model/Convert/Container/Abstract.php
+patching file app/code/core/Mage/Dataflow/Model/Convert/Parser/Csv.php
+patching file app/code/core/Mage/Dataflow/Model/Convert/Parser/Xml/Excel.php
+patching file app/code/core/Mage/ImportExport/Model/Import/Uploader.php
+patching file app/code/core/Mage/Sales/Model/Quote/Item.php
+patching file app/code/core/Mage/Widget/Model/Widget/Instance.php
+patching file app/code/core/Mage/XmlConnect/Helper/Image.php
+patching file app/code/core/Mage/XmlConnect/controllers/Adminhtml/MobileController.php
+patching file app/design/adminhtml/default/default/layout/main.xml
+patching file app/design/adminhtml/default/default/template/notification/formkey.phtml
+patching file app/design/adminhtml/default/default/template/notification/symlink.phtml
+patching file app/design/adminhtml/default/default/template/oauth/authorize/head-simple.phtml
+patching file app/design/adminhtml/default/default/template/page/head.phtml
+patching file app/design/frontend/base/default/template/checkout/cart/shipping.phtml
+patching file app/design/frontend/base/default/template/checkout/multishipping/addresses.phtml
+patching file app/design/frontend/base/default/template/checkout/multishipping/billing.phtml
+patching file app/design/frontend/base/default/template/checkout/multishipping/shipping.phtml
+patching file app/design/frontend/base/default/template/checkout/onepage/billing.phtml
+patching file app/design/frontend/base/default/template/checkout/onepage/payment.phtml
+Hunk #1 succeeded at 36 (offset -1 lines).
+patching file app/design/frontend/base/default/template/checkout/onepage/shipping.phtml
+patching file app/design/frontend/base/default/template/checkout/onepage/shipping_method.phtml
+patching file app/design/frontend/base/default/template/persistent/checkout/onepage/billing.phtml
+patching file app/design/frontend/rwd/default/layout/page.xml
+patching file app/design/frontend/rwd/default/template/checkout/cart/shipping.phtml
+patching file app/design/frontend/rwd/default/template/checkout/multishipping/addresses.phtml
+patching file app/design/frontend/rwd/default/template/checkout/multishipping/billing.phtml
+patching file app/design/frontend/rwd/default/template/checkout/onepage/payment.phtml
+Hunk #1 succeeded at 37 (offset -1 lines).
+patching file app/design/frontend/rwd/default/template/checkout/onepage/shipping.phtml
+patching file app/design/frontend/rwd/default/template/persistent/checkout/onepage/billing.phtml
+patching file app/locale/en_US/Mage_Adminhtml.csv
+Hunk #1 succeeded at 1249 (offset -36 lines).
+patching file app/locale/en_US/Mage_Core.csv
+Hunk #1 succeeded at 401 (offset -6 lines).
+patching file app/locale/en_US/Mage_Dataflow.csv
+patching file app/locale/en_US/Mage_XmlConnect.csv
+patching file downloader/Maged/Connect.php
+patching file downloader/Maged/Controller.php
+Hunk #1 succeeded at 417 (offset -4 lines).
+Hunk #2 succeeded at 964 (offset -15 lines).
+patching file downloader/Maged/Model/Session.php
+Hunk #1 succeeded at 82 with fuzz 2.
+Hunk #2 succeeded at 268 (offset -5 lines).
+patching file js/lib/jquery/jquery-1.12.0.js
+patching file js/lib/jquery/jquery-1.12.0.min.js
+patching file js/lib/jquery/jquery-1.12.0.min.map
+patching file js/varien/payment.js
+patching file skin/frontend/base/default/js/opcheckout.js
+Hunk #1 succeeded at 711 (offset 27 lines).
+
+
